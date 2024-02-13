@@ -1,5 +1,5 @@
 script_location=$(pwd)
-set -et
+set -e
 
 dnf module disable nodejs -y
 dnf module enable nodejs:18 -y
