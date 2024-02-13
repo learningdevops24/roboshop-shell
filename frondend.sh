@@ -1,7 +1,7 @@
 pwd
 script_location=$(pwd)
 
-echo -e "\e[35m Install Nginx\e[0m"
+echo -e "\e[35m Installing Nginx\e[0m"
 yum install nginx -y
 
 echo -e "\e[35m Remove Old Install Nginx\e[0m"
