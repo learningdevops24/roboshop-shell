@@ -1,12 +1,12 @@
 script_location=$(pwd)
-set -e
+
 
 dnf module disable nodejs -y
 dnf module enable nodejs:18 -y
 
 dnf install nodejs -y
 
-#useradd roboshop
+useradd roboshop
 mkdir -p /app
 
 curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
