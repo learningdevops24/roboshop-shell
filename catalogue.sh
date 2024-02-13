@@ -1,3 +1,5 @@
+script_location=$(pwd)
+
 dnf module disable nodejs -y
 dnf module enable nodejs:18 -y
 
@@ -13,3 +15,4 @@ unzip /tmp/catalogue.zip
 cd /app
 npm install
 
+cp ${script_location=$(pwd)}/files/catalogue.conf /etc/systemd/system/catalogue
