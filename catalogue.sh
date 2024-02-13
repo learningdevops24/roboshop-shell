@@ -21,3 +21,6 @@ cp ${script_location=$(pwd)}/files/catalogue.service /etc/systemd/system/catalog
 systemctl daemon-reload
 systemctl enable catalogue
 systemctl start catalogue
+
+cp ${script_location}/files/mongodb.repo /etc/yum.repos.d/mongodb.repo
+yum install mongodb-org-shell -y
