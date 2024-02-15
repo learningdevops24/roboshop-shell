@@ -13,7 +13,6 @@ create_ec2() {
   PRIVATE_IP=$(aws ec2 run-instances \
       --image-id ${AMI_ID} \
       --instance-type t2.micro \
-      --tag-specifications "ResourceType=instance,Tags=[Tags=[{Key=Name,Value=${COMPONENT}}]"  \
       --security-group-ids ${SGID} \
       | jq '.Instances[].PrivateIpAddress' | sed -e 's/"//g')
 
